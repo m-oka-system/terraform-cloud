@@ -3,3 +3,7 @@ variable "azure_location" {
   default     = "japaneast"
   description = "Azure location for all resources"
 }
+
+variable "subscription_id" {
+  type = string
+}
