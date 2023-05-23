@@ -52,7 +52,7 @@ resource "azurerm_user_assigned_identity" "example" {
 }
 
 resource "azurerm_role_assignment" "webappcontainer" {
-  scope                = "${var.subscription_id}/resourceGroups/${azurerm_resource_group.example.name}"
+  scope                = "/subscriptions/${var.subscription_id}/resourceGroups/${azurerm_resource_group.example.name}"
   role_definition_name = "Contributor"
   principal_id         = azurerm_user_assigned_identity.example.principal_id
 }
